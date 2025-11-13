@@ -3,12 +3,18 @@
     height: 83vh;
     margin-bottom: 6rem;
   }
+  
   .about-containers {
     flex-wrap: wrap;
   }
+  
   #contact,
   #projects {
     height: fit-content;
+  }
+  
+  section {
+    margin: 0 8rem;
   }
 }
 
@@ -16,34 +22,96 @@
   #desktop-nav {
     display: none;
   }
+  
   #hamburger-nav {
     display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
   }
+  
+  nav {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+  }
+  
   #experience,
   .experience-details-container {
     margin-top: 2rem;
   }
+  
   #profile,
   .section-container {
     display: block;
   }
+  
   .arrow {
     display: none;
   }
+  
   section,
   .section-container {
     height: fit-content;
   }
+  
   section {
     margin: 0 5%;
+    padding-top: 2vh;
   }
+  
   .section__pic-container {
     width: 275px;
     height: 275px;
     margin: 0 auto 2rem;
   }
+  
   .about-containers {
     margin-top: 0;
+  }
+  
+  article {
+    width: 8rem;
+  }
+  
+  .article-container {
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    margin: 0 3%;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .section__text__p2 {
+    font-size: 1.5rem;
+  }
+  
+  #profile {
+    gap: 2rem;
+  }
+  
+  .details-container {
+    padding: 1rem;
+  }
+  
+  .experience-sub-title {
+    font-size: 1.5rem;
+  }
+  
+  .btn {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .nav-links {
+    gap: 1.5rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -52,52 +120,217 @@
   footer {
     height: 40vh;
   }
+  
   #profile {
     height: 83vh;
     margin-bottom: 0;
   }
+  
   article {
     font-size: 1rem;
+    width: 100%;
+    max-width: 10rem;
   }
+  
   footer nav {
     height: fit-content;
     margin-bottom: 2rem;
   }
+  
   .about-containers,
   .contact-info-upper-container,
   .btn-container {
     flex-wrap: wrap;
   }
+  
   .contact-info-container {
-    margin: 0;
+    margin: 0.5rem;
+    flex-direction: column;
+    text-align: center;
   }
-  .contact-info-container p,
+  
+  .contact-info-container p {
+    font-size: 1rem;
+  }
+  
+  .contact-info-container a {
+    word-break: break-word;
+  }
+  
   .nav-links li a {
     font-size: 1rem;
   }
+  
   .experience-sub-title {
     font-size: 1.25rem;
   }
+  
   .logo {
     font-size: 1.5rem;
   }
+  
   .nav-links {
     flex-direction: column;
     gap: 0.5rem;
     text-align: center;
   }
+  
   .section__pic-container {
     width: auto;
     height: 46vw;
+    max-height: 300px;
     justify-content: center;
   }
+  
+  .section__text__p1 {
+    font-size: 1rem;
+  }
+  
   .section__text__p2 {
     font-size: 1.25rem;
   }
+  
   .title {
     font-size: 2rem;
   }
+  
   .text-container {
     text-align: justify;
+  }
+  
+  section {
+    margin: 0 2%;
+  }
+  
+  .btn {
+    width: 7rem;
+    padding: 0.75rem;
+    font-size: 0.85rem;
+  }
+  
+  .article-container {
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .details-container {
+    min-width: 100%;
+  }
+  
+  .project-img {
+    max-height: 200px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    font-size: 1.3rem;
+  }
+  
+  .title {
+    font-size: 1.75rem;
+  }
+  
+  .section__text__p2 {
+    font-size: 1.1rem;
+  }
+  
+  .btn {
+    width: 6.5rem;
+    padding: 0.65rem;
+    font-size: 0.8rem;
+  }
+  
+  .menu-links a {
+    font-size: 1.2rem;
+    padding: 12px 15px;
+  }
+  
+  .experience-sub-title {
+    font-size: 1.1rem;
+  }
+  
+  article h3 {
+    font-size: 1rem;
+  }
+  
+  article p {
+    font-size: 0.85rem;
+  }
+  
+  .contact-info-container p {
+    font-size: 0.9rem;
+  }
+  
+  footer p {
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .logo {
+    font-size: 1.1rem;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .section__text__p2 {
+    font-size: 1rem;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 150px;
+  }
+  
+  section {
+    margin: 0 1%;
+  }
+  
+  .hamburger-icon {
+    height: 20px;
+    width: 25px;
+  }
+  
+  .icon {
+    height: 1.75rem;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .icon:hover {
+    transform: none;
+  }
+  
+  .details-container:hover {
+    transform: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .icon:active {
+    transform: scale(0.95);
+  }
+  
+  .btn:active {
+    transform: scale(0.98);
+  }
+}
+
+@media screen and (orientation: landscape) and (max-height: 600px) {
+  #profile {
+    height: fit-content;
+    min-height: 100vh;
+    padding: 2rem 0;
+  }
+  
+  section {
+    height: fit-content;
+    min-height: 100vh;
+  }
+  
+  nav {
+    height: 10vh;
   }
 }
